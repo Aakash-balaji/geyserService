@@ -320,17 +320,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!hamburger || !navMobile) return;
 
+    const mobileViewport = window.matchMedia('(max-width: 1024px)');
+
     const openMenu = () => {
+      if (!mobileViewport.matches) return;
+      navMobile.hidden = false;
       hamburger.classList.add('active');
       navMobile.classList.add('active');
       hamburger.setAttribute('aria-expanded', 'true');
+      hamburger.setAttribute('aria-label', 'Close navigation menu');
       document.body.classList.add('nav-open');
     };
 
     const closeMenu = () => {
+      navMobile.hidden = true;
       hamburger.classList.remove('active');
       navMobile.classList.remove('active');
       hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'Open navigation menu');
       document.body.classList.remove('nav-open');
     };
 
@@ -344,6 +351,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
 
+    hamburger.setAttribute('aria-controls', navMobile.id);
+    closeMenu();
     hamburger.addEventListener('click', toggleMenu);
 
     // Close when clicking any nav link inside mobile navigation
@@ -368,12 +377,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && navMobile.classList.contains('active')) {
         closeMenu();
+        hamburger.focus();
       }
     });
 
     // Automatically close if screen is resized beyond tablet/mobile breakpoint
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 992 && navMobile.classList.contains('active')) {
+      if (!mobileViewport.matches && navMobile.classList.contains('active')) {
         closeMenu();
       }
     });
