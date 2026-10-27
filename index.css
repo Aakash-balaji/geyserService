@@ -2067,6 +2067,14 @@ button, input, textarea, select {
   padding: 90px 0;
 }
 
+.faq-section .section-header {
+  text-align: center;
+}
+
+.faq-section .badge-tag {
+  text-align: center;
+}
+
 .faq-container {
   max-width: 820px;
   margin: 40px auto 0;
