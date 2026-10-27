@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://geyser.hydservicepro.com/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://geyser.hydservicepro.com/images/hero-geyser.jpg</image:loc>
+      <image:title>Geyser Repair and Doorstep Service in Hyderabad</image:title>
+      <image:caption>Professional electric water heater service in Hyderabad and Secunderabad</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://geyser.hydservicepro.com/images/technician-service.jpg</image:loc>
+      <image:title>Certified Doorstep Geyser Service Technician</image:title>
+      <image:caption>Expert technician repairing geyser heating element and water connections</image:caption>
+    </image:image>
+  </url>
+  <url><loc>https://geyser.hydservicepro.com/services.html</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>https://geyser.hydservicepro.com/contact.html</loc><lastmod>2026-10-27</lastmod></url>
+</urlset>
